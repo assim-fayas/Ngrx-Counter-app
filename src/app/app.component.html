@@ -1,0 +1,11 @@
+<router-outlet></router-outlet>
+
+
+<div>
+  {{count$|async}}
+</div>
+<br>
+
+<button (click)="increment()">increment</button>
+<button (click)="decrement()">decrement</button>
+<button (click)="reset()">reset</button>
