@@ -17,7 +17,7 @@ export class AppComponent {
   }
 
   increment() {
-    this.store.dispatch(increment())
+    this.store.dispatch(increment({ amount: 1 }))
   }
   decrement() {
     this.store.dispatch(decrement())

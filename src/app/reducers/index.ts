@@ -19,7 +19,7 @@ export const reducers: ActionReducerMap<State> = {
   counter: counterReducer
 
 };
-
+//export the state to local storage
 export function localStorageSyncReducer(
   reducer: ActionReducer<any>
 ): ActionReducer<any> {
@@ -28,7 +28,7 @@ export function localStorageSyncReducer(
     rehydrate: true,
     storageKeySerializer: (key: string) => `${key}`,
     read: (key: string, value: string) => {
-      if (key === 'counter') {
+      if (key == 'counter') {
         return parseInt(value, 10)
       }
       return value
@@ -37,4 +37,4 @@ export function localStorageSyncReducer(
 }
 
 
-export const metaReducers: MetaReducer<State>[] = isDevMode() ? [localStorageSyncReducer] : [];
+export const metaReducers: MetaReducer<State>[] = isDevMode() ? [localStorageSyncReducer] : [localStorageSyncReducer];
