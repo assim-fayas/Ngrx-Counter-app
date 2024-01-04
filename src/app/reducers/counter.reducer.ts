@@ -1,3 +1,5 @@
+
+//creation of reducer
 import { createReducer, on } from "@ngrx/store"
 import { decrement, increment, reset } from "./counter.action"
 
